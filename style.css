@@ -19,8 +19,9 @@ html, body{
 .side-bar{
     height: 100%;
     width: 18%;
-    background-color: aqua;
+    /* background-color: aqua; */
     position: fixed;
+    padding: 25px 15px;
 }
 
 .nav{
@@ -39,13 +40,15 @@ html, body{
     top: 8%;
     padding: 45px 40px;
     font-family:inter;
+    display: block;
+
 }
 .content h1{
     margin-bottom: 5px;
     font-size: 28px;
     font-weight: 700;
 }
-.content p{
+.p{
     color: rgb(140, 141, 142);
     font-size: 14px;
     font-weight: 400;
@@ -165,13 +168,13 @@ html, body{
 }
 .graph-area{
     height: 350px;
-    width: 77%;
+    width: 65%;
     background-color: rgb(64, 50, 78);
     border-radius: 10px;
 }
 .theme-area{
     height: 60%;
-    width: 24%;
+    width: 35%;
     background-color: rgb(250, 250, 250);
     border: 1px solid rgba(208, 192, 192, 0.803);
     border-radius: 10px;
@@ -240,12 +243,366 @@ html, body{
     color: rgb(171, 2, 2);
 }
 .bottom{
-    min-height:100px ;
+    min-height:150px ;
     width: 75%;
-    background-color: rgb(150, 63, 63);
+    background-color: rgb(255, 255, 255);
     border: 1px solid rgba(208, 192, 192, 0.803);
     margin-top: 22px;
     border-radius: 10px;
+    padding: 22px;
+}
+.all-transaction-inputs{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.search input{
+    border: none;
+    outline: none;
+    background-color: rgba(0, 255, 255, 0.011);
+    
+}
+
+.search{
+    width: 30%;
+    height: 30%;
+    background-color: rgba(221, 222, 220, 0.307);
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.bottom h2{
+    margin-bottom: 15px;
+}
+
+.bottom select{
+    background-color: rgba(221, 222, 220, 0.307);
+
+    width: 70%;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+}
+.header{
+    margin-top: 20px;
+    display: grid;
+    /* grid-template-columns: 1fr 2fr 2fr 2fr 1fr; */
+    grid-template-columns: repeat(5,1fr);
+    /* margin-bottom: 10px; */
+}
+.inner{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-bottom: 14px;
+}
+.row p{
+    font-size: 14px;
+
+}
+
+.uppercase{
+    text-transform: uppercase;
+    color: rgb(107, 114, 128);
+    font-size: 12px;
+    font-weight: 700;
+}
+.date{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(26, 29, 33);
+}
+.description{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(26, 29, 33);
+}
+.category{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(26, 29, 33);
+}
+.price{
+    font-size: 14px;
+    font-weight: 600;
+}
+.side-bar h1{
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(26, 29, 33);
+}
+.logo-part img{
+    height: 40px;
+    width: 40px;
+}.logo-part{
+    display: flex;
+    gap: 4px;
+}
+.sub-heading{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(107, 114, 128);
+}
+.div-option-dashboard{
+    display: flex; 
+    gap: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    /* background-color: rgba(108, 189, 251, 0.318); */
+    border-radius: 10px;
+    color: rgba(90, 90, 92, 0.843);
+    transition: background-color 0.3s ease;
+    cursor:pointer
+}
+.div-option-dashboard:hover{
+    background-color: rgba(108, 189, 251, 0.318);
+    color: rgba(19, 2, 171, 0.899);
+}
+
+.active{
+    background-color: rgba(108, 189, 251, 0.318);
+    color: rgba(19, 2, 171, 0.899);
+}
+
+.div-option-setting{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    /* background-color: rgba(108, 189, 251, 0.318); */
+    color: rgba(90, 90, 92, 0.843);
+    border-radius: 10px;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.div-option-setting:hover{
+    color: rgba(19, 2, 171, 0.899);
+    background-color: rgba(108, 189, 251, 0.318);
+    
+}
+
+.options{
+    padding-inline:2px; 
+    margin-top: 32px;
+    width: 100%;
+}
+
+.add{
+    width:88%;
+    padding: 12px 20px;
+    position: absolute;
+    left: 13px;
+    bottom: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.settings{
+    height: 92%;
+    width: 82%;
+    position: absolute;
+    right: 0;
+    top:8%;
+    padding: 28px;
+    background-color: rgba(228, 239, 227, 0.408);
+    display: none;
+
+}
+
+.settings h1{
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(26, 29, 33);
+    margin-bottom: 6px;
+}
+
+.settings p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.settings-input-left label{
+    display: block;
+    margin-bottom: 6px;
+}
+.settings-input-right label{
+    display: block;
+    margin-bottom: 6px;
+
+}
+.settings-input{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+.profile-details{
+    height: 35%;
+    width: 65%;
+    background-color: white;
+    margin-top: 22px;
+    padding: 22px;
+    border: 1px solid rgba(208, 192, 192, 0.803);
+    border-radius: 10px;
+
+}
+.profile-details h2{
+    margin-bottom: 10px;
+}
+.settings-input-left{
+    height: 50%;
+    width: 50%;
+}
+.settings-input-right{
+    width: 50%;
+    height: 50%;
+
+}
+.settings-input-left input{
+    height: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgba(208, 192, 192, 0.803);
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgba(228, 239, 227, 0.408);
+
+}
+.settings-input-right select{
+    height: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgba(208, 192, 192, 0.803);
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgba(228, 239, 227, 0.408);
+}
+
+.save{
+    
+    width:20%;
+    padding:6px;
+    position: relative;
+    top: 45px;
+    outline: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.form{
+    height: 57%;
+    width: 30%;
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border: 1px solid rgba(208, 192, 192, 0.803);
+    border-radius: 10px;
+    padding: 23px;
+
+}
+.form-div{
+    display: none;
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.543);
+    z-index: 2;
+}
+.form h1{
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+label{
+    display: block;
+    margin-bottom:7px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.input1 select{
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgba(208, 192, 192, 0.803);
+    background-color: rgba(228, 239, 227, 0.408);
+
+
+}
+.input1{
+    margin-bottom: 10px;
+    width: 100%;;
+}
+.input1 input{
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgba(208, 192, 192, 0.803);
+    background-color: rgba(228, 239, 227, 0.408);
+
+}
+.input2{
+    margin-bottom: 20px;
+    width: 50%;
+
+
+}
+ .input2 input{
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgba(208, 192, 192, 0.803);
+    background-color: rgba(228, 239, 227, 0.408);
+
+ }
+
+ .amout-date{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+ }
+.add1{
+    
+    width:93%;
+    padding: 12px 20px;
+    position: absolute;
+    left: 13px;
+    bottom: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+.cross{
+    cursor: pointer;
+    color:gray;
+}
+.cross:hover{
+    color: black;
+}
+
+.red{
+    color: red;
+}
+green{
+    color: green;
 }
 
 

@@ -1,71 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
-  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-  rel="stylesheet"
-/>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="main">
-        <div class="nav"></div>
-        <div class="side-bar"></div>
-        <div class="content">
-            <h1>Financial Overview </h1>
-            <p>Real-time tracking application</p>
-            <div class="box">
-                <div class="box1">
-                    <div class="img-cover1">
-                    <img src="./bank-fill.png" alt="">
-                    </div>
-                    <p>Current Balance</p>
-                    <h2 class="amount">$0.00</h2>
-                </div>
-                <div class="box2">
-                    <div class="img-cover2">
-                    <img src="./increase.png" alt="">
-                    </div>
-                    <p>Total Income</p>
-                    <h2 class="amount green">$0.00</h2>
-                </div>
-                <div class="box3">
-                    <img src="./downtrend-arrow.png" alt="">
-                    <p>Total Expense</p>
-                    <h2 class="amount red">$0.00</h2>
-                </div>
-                <div class="box4">
-                    <div class="img-cover4">
-                    <img src="./pigi-bank-removebg-preview.png" alt="">
-                    </div>  
-                    <p> Total Transactions</p>
-                    <h2 class="amount">0</h2>
-                </div>
-            </div>
-            <div class="center">
-                <div class="graph-area"></div>
-                <div class="theme-area">
-                    <h1>Preferences</h1>
-                    <div class="theme">
-                    <h4 >Dark Mode</h4>
-                    <label for="check" class="label">
-                        <div class="circle"></div>
-                    </label>
-                    <input type="checkbox" id="check">
-                    </div>
-                    <div class="hr"></div>
-                    <button class="btn">
-                        <img src="./delete-bin-7-fill.png" alt="">
-                        <p>Reset All Data
-                        </button>
-                </div>
-            </div>
-            <div class="bottom"></div>
+      <div class="nav"></div>
+      <div class="side-bar">
+        <div class="logo-part">
+        <div class="left"><img src="./assets/logo.png" alt=""></div>
+        <div class="right">
+        <h3>FinTrack Pro</h3>
+        <p class="sub-heading">Enterprise Finance</p>
         </div>
-    </div>
+        </div>
+        <div class="options">
+            <div class="div-option-dashboard active">
+                <i class="ri-microsoft-line"></i>
+                <p class="p-option-dashboard">Dashboard</p>
+            </div>
+            <div class="div-option-setting">
+                <i class="ri-settings-3-fill"></i>
+                <p class="p-option-setting">Settings</p>
+            </div>
+        </div>
+          <button class="add">+ Add Transaction</button>
+
+      </div>
+      <div class="content">
+        <h1>Financial Overview</h1>
+        <p class="p">Real-time tracking application</p>
+        <div class="box">
+          <div class="box1">
+            <div class="img-cover1">
+              <img src="./assets/bank-fill.png" alt="" />
+            </div>
+            <p class="p">Current Balance</p>
+            <h2 class="amount">$0.00</h2>
+          </div>
+          <div class="box2">
+            <div class="img-cover2">
+              <img src="./assets/increase.png" alt="" />
+            </div>
+            <p class="p">Total Income</p>
+            <h2 class="amount green">$0.00</h2>
+          </div>
+          <div class="box3">
+            <img src="./assets/downtrend-arrow.png" alt="" />
+            <p class="p">Total Expense</p>
+            <h2 class="amount red">$0.00</h2>
+          </div>
+          <div class="box4">
+            <div class="img-cover4">
+              <img src="./assets/pigi-bank-removebg-preview.png" alt="" />
+            </div>
+            <p class="p">Total Transactions</p>
+            <h2 class="amount">0</h2>
+          </div>
+        </div>
+        <div class="center">
+          <div class="graph-area"></div>
+          <div class="theme-area">
+            <h2>Preferences</h2>
+            <div class="theme">
+              <h4>Dark Mode</h4>
+              <label for="check" class="label">
+                <div class="circle"></div>
+              </label>
+              <input type="checkbox" id="check" />
+            </div>
+            <div class="hr"></div>
+            <button class="btn">
+              <img src="./assets/delete-bin-7-fill.png" alt="" />
+              <p>Reset All Data</p>
+            </button>
+          </div>
+        </div>
+        <div class="bottom">
+          <h2>All Transactions</h2>
+          <div class="all-transaction-inputs">
+            <div class="search">
+              <i class="ri-search-line"></i>
+              <input type="text" placeholder="Search Transactions..." />
+            </div>
+
+            <select name="" id="">
+              <option value="All Types">All Types</option>
+              <option value="Income Only">Income Only</option>
+
+              <option value="Expense Only">Expense Only</option>
+            </select>
+          </div>
+          <div class="output">
+            <div class="header">
+            <p class="uppercase">date</p>
+            <p class="uppercase">description</p>
+
+            <p class="uppercase">category</p>
+
+            <p class="uppercase">amount</p>
+
+            <p class="uppercase">action</p>
+
+            </div>
+            <div class="hr"></div>
+            <div class="row">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings">
+        <h1>Settings</h1>
+        <p class="p">Manage your account profile and app formatting.</p>
+          <div class="profile-details">
+            <h2>Profile Details</h2>
+              <div class="settings-input">
+                <div class="settings-input-left">
+                  <label>
+                    Full Name
+                  </label>
+                  <input type="text" id="name" value = "Soubhik">
+                </div>
+                <div class="settings-input-right">
+                  <label >
+                    Primary Currency
+                  </label>
+                  <select name="" id="">
+                    <option value="$">USD ($)</option>
+                    <option value="€">EUR (€)</option>
+                    <option value="€">EUR (€)</option>
+                    <option value="₹">INR (₹)</option>
+                    <option value="¥">JPY (¥)</option>
+                  </select>
+        
+                </div>
+        
+              </div>
+              <button class="save">Save Changes</button>
+            </div>
+
+
+
+       </div>
+
+       <div class="form-div">
+       <form action="" class="form">
+        <div class="head">
+        <h1>Add Transaction</h1>
+        <h1 class="cross">X</h1>
+        </div>
+        <div class="input1">
+          <label for="">Type</label> 
+          <select name="" id="type" required >
+            <option value="Income">Income</option>
+            <option value="Expense" selected>Expense</option>
+           </select>
+        </div>
+        <div class="input1">
+          <label for="">Description</label> 
+          <input type="text" name="" id="des" required placeholder="e.g. Amazon, Salary, Coffee">
+        </div>
+        <div class="amout-date">
+          <div class="input2">
+          <label for="">Amount</label> 
+          <input type="text" required name="" id="amoun"/>
+        </div>
+        <div class="input2">
+          <label for="">Date</label>
+          <input type="date" required name="" id="dat">
+        </div>
+      </div>
+        <div class="input1">
+          <label for="">category</label> 
+          <select name="" id="cat" required >
+            <option value="Select a category" disabled selected>Select a category</option>
+            <option value="Food &amp; Dining">Food &amp; Dining</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Recharge &amp; Bills">Recharge &amp; Bills</option>
+            <option value="Petrol &amp; Auto">Petrol &amp; Auto</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Salary">Salary</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
+
+           </select>
+        </div>
+      
+        <button type="submit" class="add1"> Save Transaction</button>
+        
+      </div>
+       </form>
+
     <script src="./script.js"></script>
-</body>
+  
+  
+  </body>
 </html>
