@@ -38,31 +38,16 @@
         <h1>Financial Overview</h1>
         <p class="p">Real-time tracking application</p>
         <div class="box">
-          <div class="box1">
-            <div class="img-cover1">
-              <img src="./assets/bank-fill.png" alt="" />
-            </div>
-            <p class="p">Current Balance</p>
-            <h2 class="amount">$0.00</h2>
+          <div class="outer1">
+          
           </div>
-          <div class="box2">
-            <div class="img-cover2">
-              <img src="./assets/increase.png" alt="" />
-            </div>
-            <p class="p">Total Income</p>
-            <h2 class="amount green">$0.00</h2>
+          <div class="outer2">
+          
           </div>
-          <div class="box3">
-            <img src="./assets/downtrend-arrow.png" alt="" />
-            <p class="p">Total Expense</p>
-            <h2 class="amount red">$0.00</h2>
+          <div class="outer3">
+          
           </div>
-          <div class="box4">
-            <div class="img-cover4">
-              <img src="./assets/pigi-bank-removebg-preview.png" alt="" />
-            </div>
-            <p class="p">Total Transactions</p>
-            <h2 class="amount">0</h2>
+          <div class="outer4">
           </div>
         </div>
         <div class="center">
@@ -107,13 +92,12 @@
 
             <p class="uppercase">amount</p>
 
-            <p class="uppercase">action</p>
+            <p class="uppercase">actions</p>
 
             </div>
             <div class="hr"></div>
-            <div class="row">
-              
-            </div>
+            <div class="outer-row">
+            
           </div>
         </div>
       </div>
@@ -153,52 +137,99 @@
        </div>
 
        <div class="form-div">
-       <form action="" class="form">
-        <div class="head">
-        <h1>Add Transaction</h1>
-        <h1 class="cross">X</h1>
-        </div>
-        <div class="input1">
-          <label for="">Type</label> 
-          <select name="" id="type" required >
-            <option value="Income">Income</option>
-            <option value="Expense" selected>Expense</option>
-           </select>
-        </div>
-        <div class="input1">
-          <label for="">Description</label> 
-          <input type="text" name="" id="des" required placeholder="e.g. Amazon, Salary, Coffee">
-        </div>
-        <div class="amout-date">
-          <div class="input2">
-          <label for="">Amount</label> 
-          <input type="text" required name="" id="amoun"/>
-        </div>
-        <div class="input2">
-          <label for="">Date</label>
-          <input type="date" required name="" id="dat">
-        </div>
-      </div>
-        <div class="input1">
-          <label for="">category</label> 
-          <select name="" id="cat" required >
-            <option value="Select a category" disabled selected>Select a category</option>
-            <option value="Food &amp; Dining">Food &amp; Dining</option>
-            <option value="Shopping">Shopping</option>
-            <option value="Recharge &amp; Bills">Recharge &amp; Bills</option>
-            <option value="Petrol &amp; Auto">Petrol &amp; Auto</option>
-            <option value="Utilities">Utilities</option>
-            <option value="Salary">Salary</option>
-            <option value="Entertainment">Entertainment</option>
-            <option value="Other">Other</option>
-
-           </select>
-        </div>
+         <form action="" class="form">
+            <div class="head">
+              <h1>Add Transaction</h1>
+              <h1 class="cross">X</h1>
+            </div>
+            <div class="input1">
+              <label for="">Type</label> 
+              <select name="" class="type" required >
+                <option value="Income">Income</option>
+                <option value="Expense" selected>Expense</option>
+              </select>
+            </div>
+            <div class="input1">
+              <label for="">Description</label> 
+              <input type="text" name="" class="des" required placeholder="e.g. Amazon, Salary, Coffee">
+            </div>
+            <div class="amout-date">
+              <div class="input2">
+                <label for="">Amount</label> 
+                <input type="text" required name="" class="amoun"/>
+              </div>
+              <div class="input2">
+                <label for="">Date</label>
+                <input type="date" required name="" class="dat">
+              </div>
+            </div>
+            <div class="input1">
+              <label for="">category</label> 
+              <select name="" class="cat" required >
+                <option value="Select a category" disabled selected>Select a category</option>
+                <option value="Food &amp; Dining">Food &amp; Dining</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Recharge &amp; Bills">Recharge &amp; Bills</option>
+                <option value="Petrol &amp; Auto">Petrol &amp; Auto</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Salary">Salary</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
       
-        <button type="submit" class="add1"> Save Transaction</button>
-        
-      </div>
+            <button type="submit" class="add1"> Save Transaction</button>
        </form>
+      
+       </div>
+
+       <div class="edit-form-div">
+         <form action="" class="form">
+            <div class="head">
+              <h1>Edit Transaction</h1>
+              <h1 class="cross">X</h1>
+            </div>
+            <div class="input1">
+              <label for="">Type</label> 
+              <select name="" id="type" required >
+                <option value="Income">Income</option>
+                <option value="Expense" selected>Expense</option>
+              </select>
+            </div>
+            <div class="input1">
+              <label for="">Description</label> 
+              <input type="text" name="" id="des" required placeholder="e.g. Amazon, Salary, Coffee">
+            </div>
+            <div class="amout-date">
+              <div class="input2">
+                <label for="">Amount</label> 
+                <input type="number" required name="" id="amoun"/>
+              </div>
+              <div class="input2">
+                <label for="">Date</label>
+                <input type="date" required name="" id="dat">
+              </div>
+            </div>
+            <div class="input1">
+              <label for="">category</label> 
+              <select name="" id="cat" required >
+                <option value="Select a category" disabled selected>Select a category</option>
+                <option value="Food &amp; Dining">Food &amp; Dining</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Recharge &amp; Bills">Recharge &amp; Bills</option>
+                <option value="Petrol &amp; Auto">Petrol &amp; Auto</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Salary">Salary</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+      
+            <button type="submit" class="add1"> Save Transaction</button>
+       </form>
+      
+       </div>
+
 
     <script src="./script.js"></script>
   
