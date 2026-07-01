@@ -6,7 +6,7 @@ const settings = document.querySelector(".settings");
 const formDiv = document.querySelector(".form-div");
 const addTask = document.querySelector(".add");
 const cross = document.querySelector(".cross");
-const saveTransacton = document.querySelector(".add1");
+const saveTransactonBtn = document.querySelector(".add1");
 const form = document.querySelector(".form");
 const typeInput = document.querySelector(".type");
 const descriptionInput = document.querySelector(".des");
@@ -23,11 +23,11 @@ const descriptionInput1 = editFormDiv.querySelector(".des");
 const amountInput1 = editFormDiv.querySelector(".amoun");
 const dateInput1 = editFormDiv.querySelector(".dat");
 const categoryInput1 = editFormDiv.querySelector(".cat");
-
+const cross1 = editFormDiv.querySelector(".cross");
+cross1.style.fontSize = "16px";
 const outer3 = document.querySelector(".outer3");
-
 const outer4 = document.querySelector(".outer4");
-
+const editForm = document.querySelector(".edit-form");
 
 dateInput.value = new Date().toISOString().split("T")[0];
 
@@ -67,8 +67,7 @@ function totalTransaction(){
 
 let transactions = JSON.parse(localStorage.getItem ("transactions")) || []; 
 
-output();
-box();
+ui();
 
 function box(){
     let income = totalIncome();
@@ -109,17 +108,17 @@ function output(){
     transactions.forEach((item,id)=>{
          outerRow.innerHTML+=`<div class="row">
               <div class="inner">
-                <p class="date">${item.date}</p>
-                <p class="description">${item.description}</p>
+                <p class="date color">${item.date}</p>
+                <p class="description color">${item.description}</p>
 
-                <p class="category">${item.category}</p>
+                <p class="category color">${item.category}</p>
 
-                <p class="price ${item.type === "Expense" ? "red" : "green"}">${item.amount}</p>
+                <p class="price color ${item.type === "Expense" ? "red" : "green"}">${item.amount}</p>
 
 
                 <p class="action">
-                  <img src="./assets/pencil-line.png" onClick="edit('${id}')" class="pencil" alt="">
-                  <img src="./assets/delete-bin-7-fill.png" class="delete" alt="">
+                  <img src="./assets/pencil-line.png" onClick="edit('${id}')" class="pencil color" alt="">
+                  <img src="./assets/delete-bin-7-fill.png" onClick="del('${id}')" class="delete color" alt="">
                 </p>
               </div>
             <div class="hr"></div>
@@ -128,14 +127,20 @@ function output(){
 
 }
 
+function ui(){
+  box();
+  output();
+}
+
+let editingIndex = null;
+
 function edit(id){
+  editingIndex = id;
     let item = transactions[id];
-    console.log(item);
-    console.log(descriptionInput1);
+    // console.log(item);
+    // console.log(descriptionInput1);
     typeInput.value = item.type;
     descriptionInput1.value = item.description;
-    
-
     dateInput1.value = item.date;
     
     amountInput1.value = item.amount;
@@ -143,8 +148,35 @@ function edit(id){
     categoryInput1.value = item.category;
     
     editFormDiv.style.display="block";
+    body.style.overflow="hidden";
 
 }
+
+  editForm.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    saveTransacton(editingIndex);
+  })
+
+  function saveTransacton(editingIndex){
+    let item = transactions[editingIndex];
+      item.type = typeInput.value;
+      item.description = descriptionInput1.value;
+      item.date = dateInput1.value ;
+      
+      item.amount = amountInput1.value ;
+      
+      item.category = categoryInput1.value ;
+
+      transactions[editingIndex] = item ;
+
+      localStorage.setItem("transactions",JSON.stringify(transactions));
+      editingIndex = null;
+      body.style.overflow="auto";
+      editFormDiv.style.display="none";
+      ui();
+
+      
+  }
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
@@ -162,17 +194,28 @@ form.addEventListener("submit",(e)=>{
     formDiv.style.display="none";
 
     // console.log(transactions);
-    output();
-    box();
+    ui();
 })
 
 cross.addEventListener("click",()=>{
     formDiv.style.display="none";
-    editFormDiv.style.display="none";
+    // editFormDiv.style.display="none";
     body.style.overflow="auto";
 
 })
+
+cross1.addEventListener("click",()=>{
+    editFormDiv.style.display="none";
+    body.style.overflow="auto";
+})
 addTask.addEventListener("click",()=>{
+    descriptionInput.value = "";
+    // dateInput.value = item.date;
+    
+    amountInput.value = "";
+    
+    // categoryInput.value = "";
+    
     formDiv.style.display="block";
     body.style.overflow="hidden";
 })
@@ -196,5 +239,10 @@ divOptionDashboard.addEventListener("click",()=>{
     content.style.display="block";
 })
 
-
+function del(id){
+  console.log(transactions);
+    transactions.splice(id,1);
+    localStorage.setItem("transactions",JSON.stringify(transactions));
+    ui();
+  }
 

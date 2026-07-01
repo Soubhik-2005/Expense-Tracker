@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="dark">
     <div class="main">
       <div class="nav"></div>
       <div class="side-bar">
@@ -184,35 +184,35 @@
        </div>
 
        <div class="edit-form-div">
-         <form action="" class="form">
+         <form action="" class="edit-form">
             <div class="head">
               <h1>Edit Transaction</h1>
               <h1 class="cross">X</h1>
             </div>
             <div class="input1">
               <label for="">Type</label> 
-              <select name="" id="type" required >
+              <select name="" class="type" required >
                 <option value="Income">Income</option>
                 <option value="Expense" selected>Expense</option>
               </select>
             </div>
             <div class="input1">
               <label for="">Description</label> 
-              <input type="text" name="" id="des" required placeholder="e.g. Amazon, Salary, Coffee">
+              <input type="text" name="" class="des" required placeholder="e.g. Amazon, Salary, Coffee">
             </div>
             <div class="amout-date">
               <div class="input2">
                 <label for="">Amount</label> 
-                <input type="number" required name="" id="amoun"/>
+                <input type="number" required name="" class="amoun"/>
               </div>
               <div class="input2">
                 <label for="">Date</label>
-                <input type="date" required name="" id="dat">
+                <input type="date" required name="" class="dat">
               </div>
             </div>
             <div class="input1">
               <label for="">category</label> 
-              <select name="" id="cat" required >
+              <select name="" class="cat" required >
                 <option value="Select a category" disabled selected>Select a category</option>
                 <option value="Food &amp; Dining">Food &amp; Dining</option>
                 <option value="Shopping">Shopping</option>
